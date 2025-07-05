@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background like Netflix -->
+  <rect width="32" height="32" rx="4" fill="#141414"/>
+  
+  <!-- Red "N" like Netflix logo -->
+  <path d="M8 6V26H11.5V15.5L20.5 26H24V6H20.5V16.5L11.5 6H8Z" fill="#E50914"/>
+</svg>
