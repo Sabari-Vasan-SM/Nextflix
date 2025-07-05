@@ -102,7 +102,7 @@ const movieRows = [
     isLarge: true,
   },
   {
-    title: "Netflix Originals",
+    title: "Nextflix Originals",
     movies: [
       {
         id: "7",

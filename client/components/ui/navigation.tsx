@@ -81,7 +81,7 @@ export function Navigation() {
             )}
           </button>
 
-          {/* Netflix Logo */}
+          {/* Nextflix Logo */}
           <Link
             to="/"
             className="text-netflix-red text-xl md:text-2xl font-bold hover:text-red-600 transition-colors"
@@ -259,7 +259,7 @@ export function Navigation() {
                   }}
                   className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
                 >
-                  Sign out of Netflix
+                  Sign out of Nextflix
                 </button>
               </div>
             )}

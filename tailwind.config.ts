@@ -47,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        netflix: {
+        nextflix: {
           red: "#E50914",
           dark: "#141414",
           gray: "#2F2F2F",
@@ -110,7 +110,7 @@ export default {
       },
       fontFamily: {
         sans: [
-          "Netflix Sans",
+          "Nextflix Sans",
           "Helvetica Neue",
           "Segoe UI",
           "Roboto",

@@ -34,10 +34,10 @@
 
     --radius: 0.375rem;
 
-    --netflix-red: 0 100% 45%;
-    --netflix-dark: 0 0% 8%;
-    --netflix-gray: 0 0% 15%;
-    --netflix-light-gray: 0 0% 30%;
+    --nextflix-red: 0 100% 45%;
+    --nextflix-dark: 0 0% 8%;
+    --nextflix-gray: 0 0% 15%;
+    --nextflix-light-gray: 0 0% 30%;
   }
 }
 
@@ -81,7 +81,7 @@
 }
 
 @layer components {
-  .netflix-gradient {
+  .nextflix-gradient {
     background: linear-gradient(
       180deg,
       transparent 0%,
@@ -114,16 +114,16 @@
     transform: scale(1.05);
   }
 
-  .netflix-button {
+  .nextflix-button {
     @apply bg-[#e50914] hover:bg-[#f40612] text-white font-semibold px-6 py-2 rounded transition-colors duration-200;
   }
 
-  .netflix-button-secondary {
+  .nextflix-button-secondary {
     @apply bg-gray-500/70 hover:bg-gray-500/90 text-white font-semibold px-6 py-2 rounded transition-colors duration-200;
   }
 }
 
-/* Netflix-specific animations */
+/* Nextflix-specific animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
