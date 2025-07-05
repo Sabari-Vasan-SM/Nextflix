@@ -47,15 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        netflix: {
+          red: "#E50914",
+          dark: "#141414",
+          gray: "#2F2F2F",
+          "light-gray": "#4D4D4D",
         },
       },
       borderRadius: {
@@ -80,10 +76,47 @@ export default {
             height: "0",
           },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": {
+            transform: "translateY(100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        scaleIn: {
+          "0%": {
+            transform: "scale(0.9)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        fadeIn: "fadeIn 0.6s ease-out",
+        slideUp: "slideUp 0.6s ease-out",
+        scaleIn: "scaleIn 0.3s ease-out",
+      },
+      fontFamily: {
+        sans: [
+          "Netflix Sans",
+          "Helvetica Neue",
+          "Segoe UI",
+          "Roboto",
+          "Ubuntu",
+          "sans-serif",
+        ],
       },
     },
   },
