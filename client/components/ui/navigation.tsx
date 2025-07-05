@@ -40,7 +40,7 @@ export function Navigation() {
         <div className="flex items-center space-x-8">
           {/* Netflix Logo */}
           <Link to="/" className="text-netflix-red text-2xl font-bold">
-            NETFLIX
+            NEXTFLIX
           </Link>
 
           {/* Navigation Links - Hidden on mobile */}
