@@ -97,7 +97,7 @@ export function HeroBanner({
 
         {/* Gradients */}
         <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 netflix-gradient" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 nextflix-gradient" />
       </div>
 
       {/* Content */}
@@ -143,7 +143,7 @@ export function HeroBanner({
             <button
               onClick={handlePlay}
               disabled={isPlaying}
-              className="netflix-button flex items-center space-x-2 text-base md:text-lg px-6 md:px-8 py-2 md:py-3 disabled:opacity-50"
+              className="nextflix-button flex items-center space-x-2 text-base md:text-lg px-6 md:px-8 py-2 md:py-3 disabled:opacity-50"
             >
               <Play className="h-5 w-5 md:h-6 md:w-6 fill-current" />
               <span>{isPlaying ? "Loading..." : "Play"}</span>
@@ -152,7 +152,7 @@ export function HeroBanner({
             <div className="flex space-x-3">
               <button
                 onClick={handleMoreInfo}
-                className="netflix-button-secondary flex items-center space-x-2 text-base md:text-lg px-6 md:px-8 py-2 md:py-3"
+                className="nextflix-button-secondary flex items-center space-x-2 text-base md:text-lg px-6 md:px-8 py-2 md:py-3"
               >
                 <Info className="h-5 w-5 md:h-6 md:w-6" />
                 <span>More Info</span>
@@ -160,7 +160,7 @@ export function HeroBanner({
 
               <button
                 onClick={handleAddToList}
-                className="netflix-button-secondary flex items-center space-x-2 px-4 md:px-6 py-2 md:py-3"
+                className="nextflix-button-secondary flex items-center space-x-2 px-4 md:px-6 py-2 md:py-3"
               >
                 {isInList ? (
                   <Check className="h-5 w-5 md:h-6 md:w-6" />

@@ -61,7 +61,7 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-netflix-dark"
+          ? "bg-nextflix-dark"
           : "bg-gradient-to-b from-black/70 to-transparent",
       )}
     >
@@ -84,7 +84,7 @@ export function Navigation() {
           {/* Nextflix Logo */}
           <Link
             to="/"
-            className="text-netflix-red text-xl md:text-2xl font-bold hover:text-red-600 transition-colors"
+            className="text-nextflix-red text-xl md:text-2xl font-bold hover:text-red-600 transition-colors"
           >
             NEXTFLIX
           </Link>
@@ -155,7 +155,7 @@ export function Navigation() {
           {/* Notifications */}
           <button className="text-white hover:text-gray-300 transition-colors relative">
             <Bell className="h-5 w-5" />
-            <span className="absolute -top-1 -right-1 bg-netflix-red w-3 h-3 rounded-full text-xs flex items-center justify-center text-white">
+            <span className="absolute -top-1 -right-1 bg-nextflix-red w-3 h-3 rounded-full text-xs flex items-center justify-center text-white">
               3
             </span>
           </button>
@@ -166,7 +166,7 @@ export function Navigation() {
               onClick={() => setShowProfileMenu(!showProfileMenu)}
               className="flex items-center space-x-1 md:space-x-2 text-white hover:text-gray-300 transition-colors"
             >
-              <div className="w-6 h-6 md:w-8 md:h-8 bg-netflix-red rounded flex items-center justify-center">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-nextflix-red rounded flex items-center justify-center">
                 {selectedProfile ? (
                   <span className="text-xs md:text-sm">
                     {selectedProfile.avatar}
@@ -191,7 +191,7 @@ export function Navigation() {
                   <>
                     <div className="px-4 py-2 border-b border-gray-700">
                       <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-netflix-red rounded flex items-center justify-center text-sm">
+                        <div className="w-8 h-8 bg-nextflix-red rounded flex items-center justify-center text-sm">
                           {selectedProfile.avatar}
                         </div>
                         <span className="text-white font-medium">

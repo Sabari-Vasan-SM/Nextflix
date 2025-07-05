@@ -127,7 +127,7 @@ export function NetflixCard({
 
       {/* Expanded info on hover - Desktop only */}
       {isHovered && (
-        <div className="hidden md:block absolute top-full left-0 right-0 bg-netflix-gray rounded-b shadow-2xl p-4 animate-slideUp border-t border-gray-600">
+        <div className="hidden md:block absolute top-full left-0 right-0 bg-nextflix-gray rounded-b shadow-2xl p-4 animate-slideUp border-t border-gray-600">
           {/* Action buttons */}
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
@@ -220,7 +220,7 @@ export function NetflixCard({
           <div className="md:hidden flex items-center space-x-2 mt-2">
             <button
               onClick={handlePlay}
-              className="netflix-button text-xs px-3 py-1"
+              className="nextflix-button text-xs px-3 py-1"
             >
               <Play className="h-3 w-3 mr-1 fill-current" />
               Play

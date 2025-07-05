@@ -411,7 +411,7 @@ const movieRows = [
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-netflix-dark">
+    <div className="min-h-screen bg-nextflix-dark">
       <Navigation />
 
       <main>

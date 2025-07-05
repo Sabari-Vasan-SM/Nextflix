@@ -27,11 +27,11 @@ export default function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-netflix-dark">
+    <div className="min-h-screen bg-nextflix-dark">
       {/* Simple logo header - no full navigation for profile selection */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-netflix-dark">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-nextflix-dark">
         <div className="flex items-center justify-between px-4 md:px-16 py-4">
-          <div className="text-netflix-red text-2xl font-bold">NEXTFLIX</div>
+          <div className="text-nextflix-red text-2xl font-bold">NEXTFLIX</div>
           {selectedProfile && (
             <button
               onClick={() => {
@@ -60,11 +60,11 @@ export default function Profile() {
                 onClick={() => handleProfileSelect(profile)}
               >
                 <div
-                  className={`w-24 h-24 md:w-32 md:h-32 bg-netflix-gray rounded-lg flex items-center justify-center text-3xl md:text-4xl mb-4 transition-all duration-300 ${
+                  className={`w-24 h-24 md:w-32 md:h-32 bg-nextflix-gray rounded-lg flex items-center justify-center text-3xl md:text-4xl mb-4 transition-all duration-300 ${
                     isManaging
                       ? "group-hover:bg-red-600"
                       : "group-hover:ring-4 group-hover:ring-white group-hover:scale-105"
-                  } ${selectedProfile?.id === profile.id ? "ring-4 ring-netflix-red" : ""}`}
+                  } ${selectedProfile?.id === profile.id ? "ring-4 ring-nextflix-red" : ""}`}
                 >
                   {isManaging && (
                     <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
@@ -85,7 +85,7 @@ export default function Profile() {
                 className="text-center group cursor-pointer animate-fadeIn"
                 onClick={handleAddProfile}
               >
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-netflix-gray rounded-lg flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-all duration-300 group-hover:scale-105">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-nextflix-gray rounded-lg flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-all duration-300 group-hover:scale-105">
                   <Plus className="h-12 w-12 md:h-16 md:w-16 text-gray-400" />
                 </div>
                 <p className="text-white text-base md:text-lg group-hover:text-gray-300 transition-colors">
