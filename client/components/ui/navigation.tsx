@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Search, Bell, ChevronDown, User, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useProfile } from "@/contexts/ProfileContext";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,6 +11,8 @@ export function Navigation() {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const location = useLocation();
+  const navigate = useNavigate();
+  const { selectedProfile, setSelectedProfile, profiles } = useProfile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -164,7 +167,13 @@ export function Navigation() {
               className="flex items-center space-x-1 md:space-x-2 text-white hover:text-gray-300 transition-colors"
             >
               <div className="w-6 h-6 md:w-8 md:h-8 bg-netflix-red rounded flex items-center justify-center">
-                <User className="h-3 w-3 md:h-4 md:w-4" />
+                {selectedProfile ? (
+                  <span className="text-xs md:text-sm">
+                    {selectedProfile.avatar}
+                  </span>
+                ) : (
+                  <User className="h-3 w-3 md:h-4 md:w-4" />
+                )}
               </div>
               <ChevronDown
                 className={cn(
@@ -176,14 +185,57 @@ export function Navigation() {
 
             {/* Profile dropdown */}
             {showProfileMenu && (
-              <div className="absolute right-0 top-full mt-2 w-48 bg-black/95 border border-gray-700 rounded-sm py-2 animate-fadeIn backdrop-blur-sm">
-                <Link
-                  to="/profile"
-                  className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
-                  onClick={() => setShowProfileMenu(false)}
+              <div className="absolute right-0 top-full mt-2 w-56 bg-black/95 border border-gray-700 rounded-sm py-2 animate-fadeIn backdrop-blur-sm">
+                {/* Current Profile */}
+                {selectedProfile && (
+                  <>
+                    <div className="px-4 py-2 border-b border-gray-700">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-netflix-red rounded flex items-center justify-center text-sm">
+                          {selectedProfile.avatar}
+                        </div>
+                        <span className="text-white font-medium">
+                          {selectedProfile.name}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Other Profiles */}
+                    <div className="py-2">
+                      <div className="px-4 py-1 text-xs text-gray-400 uppercase tracking-wide">
+                        Switch Profile
+                      </div>
+                      {profiles
+                        .filter((p) => p.id !== selectedProfile.id)
+                        .map((profile) => (
+                          <button
+                            key={profile.id}
+                            onClick={() => {
+                              setSelectedProfile(profile);
+                              setShowProfileMenu(false);
+                            }}
+                            className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                          >
+                            <div className="flex items-center space-x-3">
+                              <span className="text-lg">{profile.avatar}</span>
+                              <span>{profile.name}</span>
+                            </div>
+                          </button>
+                        ))}
+                    </div>
+                    <hr className="border-gray-700 my-2" />
+                  </>
+                )}
+
+                <button
+                  onClick={() => {
+                    navigate("/profiles");
+                    setShowProfileMenu(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
                 >
                   Manage Profiles
-                </Link>
+                </button>
                 <Link
                   to="/account"
                   className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
@@ -199,7 +251,14 @@ export function Navigation() {
                   Help Center
                 </Link>
                 <hr className="border-gray-700 my-2" />
-                <button className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors">
+                <button
+                  onClick={() => {
+                    setSelectedProfile(null);
+                    navigate("/profiles");
+                    setShowProfileMenu(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                >
                   Sign out of Netflix
                 </button>
               </div>
