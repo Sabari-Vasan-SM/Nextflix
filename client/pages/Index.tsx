@@ -2,16 +2,18 @@ import { Navigation } from "@/components/ui/navigation";
 import { HeroBanner } from "@/components/ui/hero-banner";
 import { MovieRow } from "@/components/ui/movie-row";
 
-// Mock data - In a real app, this would come from an API
+// Real sample data with actual images from Pexels
 const featuredContent = {
-  title: "Stranger Things",
+  title: "Crimson Shadows",
   description:
-    "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+    "In a world where darkness threatens to consume everything, one hero must rise to face an ancient evil. A thrilling saga of courage, sacrifice, and the power of hope in the face of overwhelming odds.",
   backgroundImage:
-    "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1920&h=1080&fit=crop",
-  rating: "TV-14",
+    "https://images.pexels.com/photos/12966795/pexels-photo-12966795.jpeg",
+  videoUrl:
+    "https://videos.pexels.com/video-files/32832185/13993801_360_640_24fps.mp4",
+  rating: "TV-MA",
   year: "2024",
-  genres: ["Sci-Fi", "Drama", "Horror"],
+  genres: ["Action", "Drama", "Thriller"],
 };
 
 const movieRows = [
@@ -20,69 +22,81 @@ const movieRows = [
     movies: [
       {
         id: "1",
-        title: "The Crown",
+        title: "The Dark Cinema",
         image:
-          "https://images.unsplash.com/photo-1489599162488-d2b7b6c3e6c5?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/7991290/pexels-photo-7991290.jpeg",
         type: "series" as const,
         rating: "TV-MA",
-        year: "2023",
-        duration: "6 Seasons",
-        genres: ["Drama", "Biography"],
+        year: "2024",
+        duration: "3 Seasons",
+        genres: ["Horror", "Thriller"],
+        description:
+          "A mysterious tale that unfolds in the depths of an abandoned cinema, where reality and fiction blur together.",
       },
       {
         id: "2",
-        title: "Money Heist",
+        title: "Midnight Station",
         image:
-          "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop",
-        type: "series" as const,
-        rating: "TV-MA",
-        year: "2023",
-        duration: "5 Seasons",
-        genres: ["Crime", "Drama"],
-      },
-      {
-        id: "3",
-        title: "Extraction",
-        image:
-          "https://images.unsplash.com/photo-1518496058303-8c978c0c9a42?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/15290787/pexels-photo-15290787.jpeg",
         type: "movie" as const,
         rating: "R",
         year: "2024",
-        duration: "1h 56m",
-        genres: ["Action", "Thriller"],
+        duration: "2h 15m",
+        genres: ["Mystery", "Drama"],
+        description:
+          "A lone traveler discovers dark secrets at an isolated gas station during a stormy night.",
+      },
+      {
+        id: "3",
+        title: "Love in Shadows",
+        image:
+          "https://images.pexels.com/photos/6800202/pexels-photo-6800202.jpeg",
+        type: "series" as const,
+        rating: "TV-14",
+        year: "2024",
+        duration: "2 Seasons",
+        genres: ["Romance", "Drama"],
+        description:
+          "Two souls find each other in the most unexpected circumstances, defying all odds.",
       },
       {
         id: "4",
-        title: "The Witcher",
+        title: "Spider's Web",
         image:
-          "https://images.unsplash.com/photo-1493217465235-252dd9c0d632?w=400&h=600&fit=crop",
-        type: "series" as const,
-        rating: "TV-MA",
-        year: "2023",
-        duration: "3 Seasons",
-        genres: ["Fantasy", "Adventure"],
-      },
-      {
-        id: "5",
-        title: "Red Notice",
-        image:
-          "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg",
         type: "movie" as const,
         rating: "PG-13",
         year: "2024",
-        duration: "1h 58m",
-        genres: ["Action", "Comedy"],
+        duration: "2h 8m",
+        genres: ["Action", "Adventure"],
+        description:
+          "A web-slinging hero faces his greatest challenge yet in this action-packed adventure.",
+      },
+      {
+        id: "5",
+        title: "Vintage Tales",
+        image:
+          "https://images.pexels.com/photos/18386910/pexels-photo-18386910.jpeg",
+        type: "series" as const,
+        rating: "TV-PG",
+        year: "2024",
+        duration: "4 Seasons",
+        genres: ["Drama", "History"],
+        description:
+          "Stories from the past come alive in this anthology series spanning different eras.",
       },
       {
         id: "6",
-        title: "Ozark",
+        title: "City Lights",
         image:
-          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-        type: "series" as const,
-        rating: "TV-MA",
-        year: "2023",
-        duration: "4 Seasons",
-        genres: ["Crime", "Drama"],
+          "https://images.pexels.com/photos/19265336/pexels-photo-19265336.jpeg",
+        type: "movie" as const,
+        rating: "PG-13",
+        year: "2024",
+        duration: "1h 52m",
+        genres: ["Romance", "Comedy"],
+        description:
+          "A charming romantic comedy set against the backdrop of a bustling metropolitan city.",
       },
     ],
     isLarge: true,
@@ -92,69 +106,81 @@ const movieRows = [
     movies: [
       {
         id: "7",
-        title: "House of Cards",
+        title: "Tech Wars",
         image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/32791632/pexels-photo-32791632.jpeg",
         type: "series" as const,
         rating: "TV-MA",
-        year: "2023",
-        duration: "6 Seasons",
-        genres: ["Drama", "Political"],
+        year: "2024",
+        duration: "3 Seasons",
+        genres: ["Sci-Fi", "Drama"],
+        description:
+          "In a futuristic world, technology and humanity clash in an epic battle for control.",
       },
       {
         id: "8",
-        title: "Bird Box",
+        title: "The Hero's Journey",
         image:
-          "https://images.unsplash.com/photo-1471919743851-c4df8b6ee133?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/12966795/pexels-photo-12966795.jpeg",
         type: "movie" as const,
-        rating: "R",
+        rating: "PG-13",
         year: "2024",
-        duration: "2h 4m",
-        genres: ["Horror", "Thriller"],
+        duration: "2h 30m",
+        genres: ["Action", "Adventure"],
+        description:
+          "An ordinary person discovers extraordinary powers and must save the world from destruction.",
       },
       {
         id: "9",
-        title: "Orange Is the New Black",
+        title: "Dark Mysteries",
         image:
-          "https://images.unsplash.com/photo-1485518994577-6cd6324d8c84?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/7991290/pexels-photo-7991290.jpeg",
         type: "series" as const,
         rating: "TV-MA",
-        year: "2023",
-        duration: "7 Seasons",
-        genres: ["Comedy", "Drama"],
+        year: "2024",
+        duration: "2 Seasons",
+        genres: ["Mystery", "Horror"],
+        description:
+          "Each episode unveils a new mystery that challenges the boundaries of reality.",
       },
       {
         id: "10",
-        title: "The Irishman",
+        title: "Station 47",
         image:
-          "https://images.unsplash.com/photo-1489599162488-d2b7b6c3e6c5?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/15290787/pexels-photo-15290787.jpeg",
         type: "movie" as const,
         rating: "R",
         year: "2024",
-        duration: "3h 29m",
-        genres: ["Crime", "Drama"],
+        duration: "1h 58m",
+        genres: ["Thriller", "Action"],
+        description:
+          "A high-stakes thriller set in an abandoned facility where nothing is as it seems.",
       },
       {
         id: "11",
-        title: "Black Mirror",
+        title: "Romantic Encounters",
         image:
-          "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/6800202/pexels-photo-6800202.jpeg",
         type: "series" as const,
-        rating: "TV-MA",
-        year: "2023",
-        duration: "6 Seasons",
-        genres: ["Sci-Fi", "Thriller"],
+        rating: "TV-14",
+        year: "2024",
+        duration: "3 Seasons",
+        genres: ["Romance", "Comedy"],
+        description:
+          "Multiple love stories interweave in this heartwarming romantic series.",
       },
       {
         id: "12",
-        title: "Roma",
+        title: "Web of Destiny",
         image:
-          "https://images.unsplash.com/photo-1518496058303-8c978c0c9a42?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg",
         type: "movie" as const,
-        rating: "R",
+        rating: "PG-13",
         year: "2024",
-        duration: "2h 15m",
-        genres: ["Drama"],
+        duration: "2h 12m",
+        genres: ["Superhero", "Action"],
+        description:
+          "A web-slinging adventure that will keep you on the edge of your seat from start to finish.",
       },
     ],
   },
@@ -163,69 +189,81 @@ const movieRows = [
     movies: [
       {
         id: "13",
-        title: "John Wick",
+        title: "Red Strike",
         image:
-          "https://images.unsplash.com/photo-1493217465235-252dd9c0d632?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/12966795/pexels-photo-12966795.jpeg",
         type: "movie" as const,
         rating: "R",
         year: "2024",
-        duration: "1h 41m",
+        duration: "2h 5m",
         genres: ["Action", "Thriller"],
+        description:
+          "An elite operative must complete an impossible mission to save the world.",
       },
       {
         id: "14",
-        title: "Mad Max: Fury Road",
+        title: "Shadow Protocol",
         image:
-          "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=400&h=600&fit=crop",
-        type: "movie" as const,
-        rating: "R",
+          "https://images.pexels.com/photos/7991290/pexels-photo-7991290.jpeg",
+        type: "series" as const,
+        rating: "TV-MA",
         year: "2024",
-        duration: "2h 0m",
-        genres: ["Action", "Adventure"],
+        duration: "2 Seasons",
+        genres: ["Action", "Espionage"],
+        description:
+          "Secret agents navigate a world of deception and high-stakes international intrigue.",
       },
       {
         id: "15",
-        title: "The Dark Knight",
+        title: "Night Station",
         image:
-          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/15290787/pexels-photo-15290787.jpeg",
         type: "movie" as const,
-        rating: "PG-13",
+        rating: "R",
         year: "2024",
-        duration: "2h 32m",
+        duration: "1h 47m",
         genres: ["Action", "Crime"],
+        description:
+          "A lone wolf takes on a criminal empire in this pulse-pounding action thriller.",
       },
       {
         id: "16",
-        title: "Mission: Impossible",
+        title: "Hero Rising",
         image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg",
         type: "movie" as const,
         rating: "PG-13",
         year: "2024",
-        duration: "2h 43m",
-        genres: ["Action", "Adventure"],
+        duration: "2h 18m",
+        genres: ["Superhero", "Adventure"],
+        description:
+          "A new hero emerges to face an ancient threat in this epic superhero adventure.",
       },
       {
         id: "17",
-        title: "Avengers: Endgame",
+        title: "Tech Warrior",
         image:
-          "https://images.unsplash.com/photo-1471919743851-c4df8b6ee133?w=400&h=600&fit=crop",
-        type: "movie" as const,
-        rating: "PG-13",
+          "https://images.pexels.com/photos/32791632/pexels-photo-32791632.jpeg",
+        type: "series" as const,
+        rating: "TV-14",
         year: "2024",
-        duration: "3h 1m",
-        genres: ["Action", "Adventure"],
+        duration: "1 Season",
+        genres: ["Sci-Fi", "Action"],
+        description:
+          "In a dystopian future, a resistance fighter uses advanced technology to fight oppression.",
       },
       {
         id: "18",
-        title: "Top Gun: Maverick",
+        title: "Vintage Valor",
         image:
-          "https://images.unsplash.com/photo-1485518994577-6cd6324d8c84?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/18386910/pexels-photo-18386910.jpeg",
         type: "movie" as const,
         rating: "PG-13",
         year: "2024",
-        duration: "2h 11m",
-        genres: ["Action", "Drama"],
+        duration: "2h 1m",
+        genres: ["Adventure", "Historical"],
+        description:
+          "A period adventure that brings classic heroism to the modern screen.",
       },
     ],
   },
@@ -234,69 +272,138 @@ const movieRows = [
     movies: [
       {
         id: "19",
-        title: "The Office",
+        title: "City Comedy",
         image:
-          "https://images.unsplash.com/photo-1489599162488-d2b7b6c3e6c5?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/19265336/pexels-photo-19265336.jpeg",
         type: "series" as const,
         rating: "TV-14",
-        year: "2023",
-        duration: "9 Seasons",
-        genres: ["Comedy"],
+        year: "2024",
+        duration: "3 Seasons",
+        genres: ["Comedy", "Romance"],
+        description:
+          "Hilarious mishaps and romantic entanglements in the big city.",
       },
       {
         id: "20",
-        title: "Brooklyn Nine-Nine",
+        title: "Bookstore Blues",
         image:
-          "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop",
-        type: "series" as const,
-        rating: "TV-14",
-        year: "2023",
-        duration: "8 Seasons",
-        genres: ["Comedy", "Crime"],
+          "https://images.pexels.com/photos/18386910/pexels-photo-18386910.jpeg",
+        type: "movie" as const,
+        rating: "PG-13",
+        year: "2024",
+        duration: "1h 38m",
+        genres: ["Comedy", "Drama"],
+        description:
+          "A quirky comedy about life, love, and literature in a vintage bookstore.",
       },
       {
         id: "21",
-        title: "The Good Place",
+        title: "Love Projection",
         image:
-          "https://images.unsplash.com/photo-1518496058303-8c978c0c9a42?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/6800202/pexels-photo-6800202.jpeg",
         type: "series" as const,
         rating: "TV-PG",
-        year: "2023",
-        duration: "4 Seasons",
-        genres: ["Comedy", "Fantasy"],
+        year: "2024",
+        duration: "2 Seasons",
+        genres: ["Romantic Comedy"],
+        description:
+          "A feel-good romantic comedy series that will warm your heart and make you laugh.",
       },
       {
         id: "22",
-        title: "Superbad",
+        title: "Tech Support",
         image:
-          "https://images.unsplash.com/photo-1493217465235-252dd9c0d632?w=400&h=600&fit=crop",
+          "https://images.pexels.com/photos/32791632/pexels-photo-32791632.jpeg",
         type: "movie" as const,
-        rating: "R",
+        rating: "PG-13",
         year: "2024",
-        duration: "1h 53m",
-        genres: ["Comedy"],
+        duration: "1h 45m",
+        genres: ["Comedy", "Sci-Fi"],
+        description:
+          "A hilarious look at technology gone wrong and the people trying to fix it.",
       },
       {
         id: "23",
-        title: "Step Brothers",
+        title: "Hero Academy",
         image:
-          "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=400&h=600&fit=crop",
-        type: "movie" as const,
-        rating: "R",
+          "https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg",
+        type: "series" as const,
+        rating: "TV-PG",
         year: "2024",
-        duration: "1h 38m",
-        genres: ["Comedy"],
+        duration: "2 Seasons",
+        genres: ["Comedy", "Superhero"],
+        description:
+          "Young heroes-in-training navigate the challenges of superhero school.",
       },
       {
         id: "24",
-        title: "Parks and Recreation",
+        title: "Cinema Laughs",
         image:
-          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-        type: "series" as const,
-        rating: "TV-PG",
-        year: "2023",
-        duration: "7 Seasons",
+          "https://images.pexels.com/photos/7991290/pexels-photo-7991290.jpeg",
+        type: "movie" as const,
+        rating: "PG-13",
+        year: "2024",
+        duration: "1h 32m",
         genres: ["Comedy"],
+        description:
+          "A laugh-out-loud comedy that takes you behind the scenes of movie-making mayhem.",
+      },
+    ],
+  },
+  {
+    title: "Horror & Thriller",
+    movies: [
+      {
+        id: "25",
+        title: "Dark Theater",
+        image:
+          "https://images.pexels.com/photos/7991290/pexels-photo-7991290.jpeg",
+        type: "movie" as const,
+        rating: "R",
+        year: "2024",
+        duration: "1h 54m",
+        genres: ["Horror", "Supernatural"],
+        description:
+          "An abandoned movie theater holds terrifying secrets that refuse to stay buried.",
+      },
+      {
+        id: "26",
+        title: "Midnight Drive",
+        image:
+          "https://images.pexels.com/photos/15290787/pexels-photo-15290787.jpeg",
+        type: "series" as const,
+        rating: "TV-MA",
+        year: "2024",
+        duration: "1 Season",
+        genres: ["Horror", "Thriller"],
+        description:
+          "Late night travelers encounter supernatural horrors on desolate roads.",
+      },
+      {
+        id: "27",
+        title: "Shadow Romance",
+        image:
+          "https://images.pexels.com/photos/6800202/pexels-photo-6800202.jpeg",
+        type: "movie" as const,
+        rating: "R",
+        year: "2024",
+        duration: "2h 3m",
+        genres: ["Horror", "Romance"],
+        description:
+          "A twisted love story that blurs the line between passion and obsession.",
+      },
+      {
+        id: "28",
+        title: "Web of Fear",
+        image:
+          "https://images.pexels.com/photos/12689070/pexels-photo-12689070.jpeg",
+        type: "series" as const,
+        rating: "TV-MA",
+        year: "2024",
+        duration: "2 Seasons",
+        genres: ["Horror", "Psychological"],
+        description:
+          "Psychological horror that weaves a web of terror around its unsuspecting victims.",
       },
     ],
   },
@@ -312,7 +419,7 @@ export default function Index() {
         <HeroBanner {...featuredContent} />
 
         {/* Movie Rows */}
-        <div className="space-y-12 pb-16">
+        <div className="space-y-8 md:space-y-12 pb-16">
           {movieRows.map((row, index) => (
             <MovieRow
               key={index}
